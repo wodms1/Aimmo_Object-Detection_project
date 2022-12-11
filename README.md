@@ -146,3 +146,13 @@ python
 
 ![image](https://user-images.githubusercontent.com/91417254/206923640-64b8c168-978a-4f7b-a850-d736891a2bb8.png)
 
+### 2.3.2 Data Format
+- MMDetection training & inference 를 위한 Data format converting
+    1. COCO format
+        ![image](https://user-images.githubusercontent.com/91417254/206923719-25fe3245-e6ac-45ef-91e6-30e367783a2d.png)
+    2. Middle format
+        ![image](https://user-images.githubusercontent.com/91417254/206923745-910cc39c-5fe9-43d7-a802-43246b460c78.png)
+
+    4. 
+
+
