@@ -5,7 +5,7 @@
 
 ## 1.1 개요
 - 주제 : Model-Centric Object Detection AI
-- 목적 : 제한적인 조건(주간/맑음 dataset)에서 추론 성능이 잘 나오는 모델을 합리적으로 찾아서 학습 및 테스트
+- 목적 : 제한적인 조건(주간/맑음 & 특정 class dataset)에서 추론 성능이 잘 나오는 모델을 합리적으로 찾아서 학습 및 테스트
 - 기간 : 2022.11.01 ~ 2022.12.13
 - 방식 : 팀프로젝트
 
@@ -141,4 +141,8 @@ python
 - 전체 dataset이 아닌 한정된(주간/맑음) dataset 사용
     - 78,463 -> 23,342 
 ### 2.3.2 Class
+- 전체 label & attribute가 아닌 한정된 class 사용
 - car,bus,truck,pedestrian class 사용
+
+![image](https://user-images.githubusercontent.com/91417254/206923640-64b8c168-978a-4f7b-a850-d736891a2bb8.png)
+
