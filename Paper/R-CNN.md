@@ -39,3 +39,53 @@
       - 32 positive, 96 background windows → 128 batch size   
         - (positive windows are rare compare to background)
         - In each SGD iteration ( mini-batch of size 128)
+
+```
+Transfer learning(전이학습)
+- 정의:한 분야의 문제를(downstream task) 해결하기 위해서 다른 분야(pre-train task)
+에서얻은 지식을 활용하는 방식 
+    -  Pre-trained task : solved task ex) ImageNet
+    -  Downstream task :  target task ex) PASCAL VOC
+
+pre-training(사전학습)
+- 정의: parameters의 초기값을 정하는 방법으로 pre-trained task dataset으로 학습한다.
+
+fine-tuning(미세 조정)
+- 정의 : 사전학습으로 학습된 모델(가중치)를 새로운 분야(탐지) 및 영역에 맞게 변환하는 방법
+````
+3. Extract feature vectors of region proposals 
+  - extract a 4096-dimensional feature vector from each region proposal using CNN(AlexNet)
+    - feature extract
+      - fine-tuning
+        - 5 conv layer + 2 FC layer (N+1)
+      - test
+        - 5 conv. layers & 2 FC layer(4096)
+    - output → (2000,4096) matrix
+
+
+## Third
+### Set of classes specific linear SVM
+1. result
+  - Positive : image region tightly enclosing a object
+    - if region proposals and ground truth IOU>0.3  than positive 
+  - Negative: background region which has nothing to do with object
+   - if region proposals and ground truth IOU≤0.3  than negative
+  - Less Clear: region that partially overlaps a object
+    - Why IoU threshold 0.3?
+      - The overlap threshold, 0.3,was selected by a grid search over {0, 0.1, . . . , 0.5} on a validation set. 
+2. SVM’s processing
+  - optimize one linear SVM per class.
+  - using hard negative mining
+    - why using hard negative mining?
+     - training data is too large to fit in memory
+```
+💡 Negative Mining
+
+hard negative mining는 hard negative 데이터(원래 negative 인데 positive라고 잘못 예측한 데이터)를 학습 데이터로 사용하기 위해 모으는(mining) 것이다.
+
+hard negative mining으로 얻은 데이터를 원래의 데이터에 추가해서 재학습하면  false positive 오류에 강해진다.
+
+
+```
+![image](https://user-images.githubusercontent.com/91417254/206924395-84db7b30-72ce-4ea6-8dc7-ebe98e46a685.png)
+![image](https://user-images.githubusercontent.com/91417254/206924399-1a547779-abfa-4ffb-88bd-2913f38ab74e.png)
