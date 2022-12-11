@@ -26,7 +26,7 @@
 
 # 2. Data
 ## 2.1 Aimmo Dataset
-![image](https://user-images.githubusercontent.com/91417254/206915913-96f3c3ee-5101-46b9-9c57-f850ede2f93c.png)
+[image](https://user-images.githubusercontent.com/91417254/206915913-96f3c3ee-5101-46b9-9c57-f850ede2f93c.png)
 ```
 python
 {
