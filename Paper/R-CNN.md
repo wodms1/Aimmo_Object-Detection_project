@@ -69,7 +69,7 @@ fine-tuning(미세 조정)
   - Positive : image region tightly enclosing a object
     - if region proposals and ground truth IOU>0.3  than positive 
   - Negative: background region which has nothing to do with object
-   - if region proposals and ground truth IOU≤0.3  than negative
+    - if region proposals and ground truth IOU≤0.3  than negative
   - Less Clear: region that partially overlaps a object
     - Why IoU threshold 0.3?
       - The overlap threshold, 0.3,was selected by a grid search over {0, 0.1, . . . , 0.5} on a validation set. 
@@ -77,7 +77,8 @@ fine-tuning(미세 조정)
   - optimize one linear SVM per class.
   - using hard negative mining
     - why using hard negative mining?
-     - training data is too large to fit in memory
+      - training data is too large to fit in memory
+    - IoU(if there is a lot of overlapping part with the ground truth → an area displaying an object, and in the opposite case → a background independent of the object)
 ```
 💡 Negative Mining
 
@@ -89,3 +90,15 @@ hard negative mining으로 얻은 데이터를 원래의 데이터에 추가해�
 ```
 ![image](https://user-images.githubusercontent.com/91417254/206924395-84db7b30-72ce-4ea6-8dc7-ebe98e46a685.png)
 ![image](https://user-images.githubusercontent.com/91417254/206924399-1a547779-abfa-4ffb-88bd-2913f38ab74e.png)
+
+## Appendix
+### Positive vs negative examples and softmax
+- pre-trained CNN (regoin proposal)
+  - threshold ≥ 0.5 IoU → positive 
+  - threshold < 0.5 IoU → negative 
+- SVM 
+  - threshold ≥ 0.3 IoU → positive(Only Ground Truth)  
+  - threshold < 0.3 IoU → negative(Background)
+  - Proposal that fall into the grey zone are ignored
+    - gray zone
+      -  more than 0.3 IoU overlap, but are not ground truth  
