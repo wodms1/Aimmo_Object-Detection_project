@@ -1,7 +1,8 @@
-|이름|직책|역할|
-|----|-----|-----|
-|이재은|팀장|Data EDA & Preprocessing, modeling(faster-rcnn,yolo_v3,yolox,fcos)|
-|박철영|팀원|EDA, RCNN 및 YOLO 논문 리뷰|
-|최훈성|팀원|modeling(yolox)|
-|김명찬|팀원|modeling(yolo_v5)|
-|윤동환|팀원|data format transform, modeling(yolo_v3)|
+|file_name|fulldata|backbone|epoch|img_size |anchor_box_scale|anchor_box_stride|best_val_mAP|best_test_mAP|
+|----|-----|-----|-----|-----|-----|-----|-----|-----|
+|default|x|resnet 50|50|(960,512)|default|default|||
+|fulldata|o|resnet 50|15|(960,512)|default|default|||
+|fulldata_fullsize|o|resnet 50|15|(960,960)|default|default|||
+|anchor_box_scale|o|resnet 50|15|(960,512)|1/2|default|||
+|anchor_box_scale_stride|o|resnet 50|15|(960,512)|1/2|1/2|||
+|fulldata_r101|o|resnet 101|15|(960,512)|default|default|||
