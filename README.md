@@ -119,9 +119,20 @@ python
 ### 2.2.3 annotations EDA
 ![image](https://user-images.githubusercontent.com/91417254/206916630-6900541f-ed69-4e4e-aeab-ae1d85c58503.png)
 - 23,342의 annotations file의 bbox 수량은 362,428
-#### label
-![image](https://user-images.githubusercontent.com/91417254/206916675-6ac4a141-e8d7-422d-8760-a3765fadc48e.png)
 
+![image](https://user-images.githubusercontent.com/91417254/206916675-6ac4a141-e8d7-422d-8760-a3765fadc48e.png)
+![image](https://user-images.githubusercontent.com/91417254/206916894-f8521fc5-ceb5-4aa3-9963-ab7b3049f7e0.png)
+![image](https://user-images.githubusercontent.com/91417254/206916909-7882ccfd-f2d4-4dcb-a8be-d7f40195de17.png)
+
+![image](https://user-images.githubusercontent.com/91417254/206916924-a543a434-73d6-425b-917f-87afeb7cef39.png)
+![image](https://user-images.githubusercontent.com/91417254/206916932-2f900822-1a4a-421a-987f-e552e7a83fd1.png)
+![image](https://user-images.githubusercontent.com/91417254/206916940-60336338-b625-40d8-b355-dfc3f8a9bcbc.png)
+
+- Objcet의 Class(정답)에 해당하는 label과 attribute(상세 label) 모두 class unbalance가 존재한다.
+
+![image](https://user-images.githubusercontent.com/91417254/206917009-37766f88-e8e7-4b21-a66c-e8977295146d.png)
+![image](https://user-images.githubusercontent.com/91417254/206917066-8f1753ea-9c57-48d2-aee2-6916e0b9efba.png)
+- 625 pixel size 이하의 bbox(번호판,차량 )가 약 30% 존재한다
 
 
 
