@@ -136,4 +136,9 @@ python
 - 625 pixel size 이하의 bbox(번호판,차량 )가 약 30% 존재한다
 
 
-
+## 2.3 Data Preprocessing
+### 2.3.1 Sunny & Day dataset
+- 전체 dataset이 아닌 한정된(주간/맑음) dataset 사용
+    - 78,463 -> 23,342 
+### 2.3.2 Class
+- car,bus,truck,pedestrian class 사용
