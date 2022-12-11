@@ -158,6 +158,7 @@ python
 ### 3.1 R-CNN
 - R-CNN 원문을 읽고 서로 논문 리뷰를 통하여 Object Detection에 대한 기본 개념 학습
 - 학습한 개념
+    - R-CNN 구조
     - IOU
     - mAP
     - 1-stage, 2-stage
@@ -168,4 +169,6 @@ python
         - fine-tuning
     - Negative Mining 
 
-
+## 4. Model
+### 4.1 MMDetection
+[mmdetection tutorial 학습](https://github.com/wodms1/Aimmo_Object-Detection_project/tree/master/Model/MMdetection/Tutorial)
