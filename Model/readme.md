@@ -11,7 +11,7 @@
 # YOLO v3
 |file_name|fulldata|backbone|epoch|img_size |anchor_box_scale|anchor_box_stride|best_val_mAP|best_test_mAP|
 |----|-----|-----|-----|-----|-----|-----|-----|-----|
-|default|x|darknet|15|(960,960)|default|default|0.845||
+|default|x|darknet|15|(960,960)|default|default|0.845|X|
 |mixed_precision_training|o|darknet|15|(960,960)|default|default|0.828||
 
 # YOLO v5
