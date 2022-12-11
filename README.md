@@ -14,7 +14,7 @@
 ### 1.3 구성원
 |이름|직책|역할|
 |----|-----|-----|
-|이재은|팀장|Data EDA & Preprocessing, modeling(faster-rcnn,yolox,fcos), 결과분석|
+|이재은|팀장|Data EDA & Preprocessing, modeling(faster-rcnn,yolox,fcos)|
 |박철영|팀원|EDA, RCNN 및 YOLO 논문 리뷰|
 |최훈성|팀원|modeling(yolox)|
 |김명찬|팀원|modeling(yolo_v5)|
@@ -23,7 +23,7 @@
 ### 1.4 기술 스택
 - jupyter notebook , mmdetection 
 
-## 2. 데이터 정의 및 EDA
+## 2. Aimmo Dataset
 ### 2.1 데이터 정의
 <img width="449" alt="image" src="https://user-images.githubusercontent.com/101169092/206894223-f194b9ef-3eac-4a64-a37e-4ce561e8389a.png"> <img width="413" alt="image" src="https://user-images.githubusercontent.com/101169092/206894229-0764b988-f777-4f29-871a-91779b3d3a20.png">
 
