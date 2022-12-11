@@ -24,4 +24,4 @@
 # FCOS
 |file_name|fulldata|backbone|epoch|img_size |best_val_mAP|best_test_mAP|
 |----|-----|-----|-----|-----|-----|-----|
-|fcos|o|resnet 50|12|(960,512)|0.851||
+|fcos|o|resnet 50|12|(960,512)|0.851|0.378|
