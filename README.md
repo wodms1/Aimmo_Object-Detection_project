@@ -101,21 +101,23 @@ python
         },
         '''
 
-
 ```
-
-- 메타 정보 : 주간, 맑음
-- 레이블링 정보 : 차량, 버스, 트럭, 사람 등
-- 데이터양 : 총 156,957(image : 78,484개, annotations : 78,463개)
+- total dataset : 156,957
+    - image : 78,494
+    - annotation: 78,463
+    - unpaired images: 31 
 
 ### 2.2 EDA
-#### 2.2 Sunny & Day Data EDA
-- 총 78,464의 data 중에서 주간, 맑음에 해당하는 data는 23,342개 
+#### 2.2.1 Sunny & Day Data 
+- model_centric은 전체 dataset이 아닌 sunny/day datset만을 사용한다.
+- 총 78,463의 annotation file 중 sunnay/day file은 23,342 
 
-#### 2.3 meta data EDA
-- 주간 & 맑음에 해당하는 meta data는 총 362,428개
+#### 2.2.2 meta data EDA
+![image](https://user-images.githubusercontent.com/91417254/206916500-2dc5bf04-42e3-41a6-bda2-91470cae8840.png)
+![image](https://user-images.githubusercontent.com/91417254/206916507-90d67b37-f9b9-49f7-9549-80fa467f14af.png)
 
-#### 2.4 annotations label
+
+#### 2.2.3 annotations label
 <img width="428" alt="image" src="https://user-images.githubusercontent.com/101169092/206896042-4d064589-7cc8-4eb5-b86f-9be99ff34c29.png"> <img width="498" alt="image" src="https://user-images.githubusercontent.com/101169092/206896054-301536b4-1fe1-47f9-b898-22a95c807060.png">
 
 
