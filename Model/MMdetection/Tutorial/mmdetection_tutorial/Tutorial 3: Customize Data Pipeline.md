@@ -76,3 +76,52 @@
                 ])
         ]
         ```
+- **Extend and use custom pipelines**
+    1. 새로운 pipelin file 정의 후 저장 **my_pipeline.py**
+    
+    ```python
+    import random
+    from mmdet.datasets import PIPELINES
+    
+    @PIPELINES.register_module()
+    class MyTransform:
+        """Add your transform
+    
+        Args:
+            p (float): Probability of shifts. Default 0.5.
+        """
+    
+        def __init__(self, p=0.5):
+            self.p = p
+    
+        def __call__(self, results):
+            if random.random() > self.p:
+                results['dummy'] = True
+            return results
+    ```
+    
+    1. import & use my_pipelin
+    
+    ```python
+    custom_imports = dict(imports=['path.to.my_pipeline'], allow_failed_imports=False)
+    
+    img_norm_cfg = dict(
+        mean=[123.675, 116.28, 103.53], std=[58.395, 57.12, 57.375], to_rgb=True)
+    train_pipeline = [
+        dict(type='LoadImageFromFile'),
+        dict(type='LoadAnnotations', with_bbox=True),
+        dict(type='Resize', img_scale=(1333, 800), keep_ratio=True),
+        dict(type='RandomFlip', flip_ratio=0.5),
+        dict(type='Normalize', **img_norm_cfg),
+        dict(type='Pad', size_divisor=32),
+        dict(type='MyTransform', p=0.2),
+        dict(type='DefaultFormatBundle'),
+        dict(type='Collect', keys=['img', 'gt_bboxes', 'gt_labels']),
+    ]
+    ```
+    
+    1. pipeline 시각화
+    
+    ```python
+    tools/misc/browse_dataset.py
+    ```
