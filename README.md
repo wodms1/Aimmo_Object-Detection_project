@@ -1,10 +1,10 @@
 # AIFFEL x AIMMO Project
-- 이 프로젝트에 관한 이야기
+- DL 기반 데이터 라벨링 서비스를 제공하는 Aimmo의 자율주행 학습용 Dataset을 활용하여 Model-centric Object Detection을 구현한다.
 
 ## 1. 프로젝트 소개
 
 ### 1.1 개요
-- 주제 : 고정된 데이터를 활용한 모델 성능 향상
+- 주제 : Model-Centric Object Detection AI
 - 기간 : 2022.11.01 ~ 2022.12.13
 - 방식 : 팀프로젝트
 
