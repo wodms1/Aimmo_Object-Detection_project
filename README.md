@@ -155,5 +155,17 @@ python
 
 
 ## 3. Object Detection Paper
+### 3.1 R-CNN
+- R-CNN 원문을 읽고 서로 논문 리뷰를 통하여 Object Detection에 대한 기본 개념 학습
+- 학습한 개념
+    - IOU
+    - mAP
+    - 1-stage, 2-stage
+    - Selective Search
+    - Warp & Crop 차이점
+    - transfer learning
+        - pre-training
+        - fine-tuning
+    - Negative Mining 
 
 
