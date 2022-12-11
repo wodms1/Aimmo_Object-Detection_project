@@ -19,7 +19,7 @@
 # YOLO X
 |file_name|fulldata|backbone|epoch|img_size |best_val_mAP|best_test_mAP|
 |----|-----|-----|-----|-----|-----|-----|
-|yolox-L|o|CSPDarknet|12|(640,640)|0.768||
+|yolox-L|o|CSPDarknet|12|(640,640)|0.768|0.626|
 
 # FCOS
 |file_name|fulldata|backbone|epoch|img_size |best_val_mAP|best_test_mAP|
