@@ -22,7 +22,7 @@
 |윤동환|팀원|data format transform, modeling(yolo_v3)|
 
 ## 1.4 기술 스택
-- jupyter notebook , mmdetection 
+- jupyter notebook , mmdetection , WandB 
 
 # 2. Data
 ## 2.1 Aimmo Dataset
