@@ -23,9 +23,86 @@
 ### 1.4 기술 스택
 - jupyter notebook , mmdetection 
 
-## 2. Aimmo Dataset
-### 2.1 데이터 정의
-<img width="449" alt="image" src="https://user-images.githubusercontent.com/101169092/206894223-f194b9ef-3eac-4a64-a37e-4ce561e8389a.png"> <img width="413" alt="image" src="https://user-images.githubusercontent.com/101169092/206894229-0764b988-f777-4f29-871a-91779b3d3a20.png">
+## 2. Data
+### 2.1 Aimmo Dataset
+![image](https://user-images.githubusercontent.com/91417254/206915913-96f3c3ee-5101-46b9-9c57-f850ede2f93c.png)
+```
+python
+{
+    "filename": "1660698683036_FR-View-CMR-Wide.png",
+    "parent_path": "/batch_11/20220817/2022-08-17_10-11-24_ADCV1-ADS-LC1/FR-View-CMR-Wide",
+    "unix_timestamp": 1660698683036,
+    "file_format": "png",
+    "capacity": 2.3,
+    "vehicle_id": "AIMMO-ADCV1",
+    "region_name": "인천 남동구",
+    "location": "수산동 450-1",
+    "length": 9,
+    "framerate": 30,
+    "size": "1920*1024",
+    "data_purpose": "train",
+    "weather": "sunny",
+    "time": "day",
+    "road_feature": "r_expressway",
+    "road_type": "normal",
+    "location_feature": "other",
+    "driving_scenario": "lane_following",
+    "ego_long_vel_level": "middle",
+    "season": "summer",
+    "illumination_status": "normal",
+    "road_status": "dry",
+    "crowd_level": "high",
+    "scene_att": "frame",
+    "sensor_name": "FR_View_CMR_Wide",
+    "sensor_status": "normal",
+    "sensor_hfov": 122,
+    "sensor_vfov": 74,
+    "gps_mode": "other",
+    "gps_latitude": 37.433127531808736,
+    "gps_longitude": 126.7339902817851,
+    "long_velocity": 63.8,
+    "lat_velocity": -0.04,
+    "long_accel": -0.53,
+    "lat_accel": 0.11,
+    "yaw": 177.83,
+    "roll": 0.28,
+    "pitch": 2.96,
+    "annotations": [
+        {
+            "id": "1-f21428d6-1cbe-4cc5-85e9-06d7013502fa",
+            "type": "bbox",
+            "label": "vehicle",
+            "attribute": "truck_s",
+            "points": [
+                [
+                    1578,
+                    593
+                ],
+                [
+                    1920,
+                    593
+                ],
+                [
+                    1920,
+                    1024
+                ],
+                [
+                    1578,
+                    1024
+                ]
+            ],
+            "trackId": -1,
+            "occlusion": 0,
+            "truncation": 3,
+            "scenario": 0,
+            "isfake": 0,
+            "ismask": 0,
+            "area": 147402
+        },
+        '''
+
+
+```
 
 - 메타 정보 : 주간, 맑음
 - 레이블링 정보 : 차량, 버스, 트럭, 사람 등
