@@ -8,7 +8,7 @@
         - orange : result dict or update key
         - dark : no change
     
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2ad011db-6f4f-4460-8542-b6761b2cf1dc/Untitled.png)
+    ![image](https://user-images.githubusercontent.com/91417254/206927084-e92b4deb-4d29-4053-ac98-61ced3866530.png)
     
     - whole pipeline
         - data loading → pre-processing → (test time augmentation)→formatting
