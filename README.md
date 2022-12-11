@@ -14,14 +14,14 @@
 ### 1.3 구성원
 |이름|직책|역할|
 |----|-----|-----|
-|이재은|팀장|Data EDA & Preprocessing, modeling(), 결과분석|
+|이재은|팀장|Data EDA & Preprocessing, modeling(faster-rcnn,yolox,fcos), 결과분석|
 |박철영|팀원|EDA, RCNN 및 YOLO 논문 리뷰|
-|최훈성|팀원|modeling|
+|최훈성|팀원|modeling(yolox)|
 |김명찬|팀원|modeling(yolo_v5)|
 |윤동환|팀원|data format transform, modeling(yolo_v3)|
 
 ### 1.4 기술 스택
-- Python,mmdetection, Pandas, Numpy, Matplotlib, Seaborn
+- jupyter notebook , mmdetection 
 
 ## 2. 데이터 정의 및 EDA
 ### 2.1 데이터 정의
