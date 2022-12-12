@@ -27,49 +27,10 @@
 
 ## 1) image file
 
-![image](https://user-images.githubusercontent.com/91417254/206896357-de32bb22-a40f-41f1-8a14-63c76d1534f4.png)
 
 ## 2) annotation file
 ```python
 {
-    "filename": "1660698683036_FR-View-CMR-Wide.png",
-    "parent_path": "/batch_11/20220817/2022-08-17_10-11-24_ADCV1-ADS-LC1/FR-View-CMR-Wide",
-    "unix_timestamp": 1660698683036,
-    "file_format": "png",
-    "capacity": 2.3,
-    "vehicle_id": "AIMMO-ADCV1",
-    "region_name": "인천 남동구",
-    "location": "수산동 450-1",
-    "length": 9,
-    "framerate": 30,
-    "size": "1920*1024",
-    "data_purpose": "train",
-    "weather": "sunny",
-    "time": "day",
-    "road_feature": "r_expressway",
-    "road_type": "normal",
-    "location_feature": "other",
-    "driving_scenario": "lane_following",
-    "ego_long_vel_level": "middle",
-    "season": "summer",
-    "illumination_status": "normal",
-    "road_status": "dry",
-    "crowd_level": "high",
-    "scene_att": "frame",
-    "sensor_name": "FR_View_CMR_Wide",
-    "sensor_status": "normal",
-    "sensor_hfov": 122,
-    "sensor_vfov": 74,
-    "gps_mode": "other",
-    "gps_latitude": 37.433127531808736,
-    "gps_longitude": 126.7339902817851,
-    "long_velocity": 63.8,
-    "lat_velocity": -0.04,
-    "long_accel": -0.53,
-    "lat_accel": 0.11,
-    "yaw": 177.83,
-    "roll": 0.28,
-    "pitch": 2.96,
     "annotations": [
         {
             "id": "1-f21428d6-1cbe-4cc5-85e9-06d7013502fa",
