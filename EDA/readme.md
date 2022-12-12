@@ -29,41 +29,7 @@
 
 
 ## 2) annotation file
-```python
-{
-    "annotations": [
-        {
-            "id": "1-f21428d6-1cbe-4cc5-85e9-06d7013502fa",
-            "type": "bbox",
-            "label": "vehicle",
-            "attribute": "truck_s",
-            "points": [
-                [
-                    1578,
-                    593
-                ],
-                [
-                    1920,
-                    593
-                ],
-                [
-                    1920,
-                    1024
-                ],
-                [
-                    1578,
-                    1024
-                ]
-            ],
-            "trackId": -1,
-            "occlusion": 0,
-            "truncation": 3,
-            "scenario": 0,
-            "isfake": 0,
-            "ismask": 0,
-            "area": 147402
-        },
-        '''
+
 
 
 ```
@@ -71,7 +37,6 @@
 </details>
 
 ## Number of Dataset
-![image](https://user-images.githubusercontent.com/91417254/206896982-9133c3f6-2627-4c79-aaa3-4ba613bdb7d9.png)
 - 총 file의 수는 156,957
   - image :78,494
   - annotation: 78,464
@@ -95,33 +60,19 @@ df = df[(df['time']=='day') & (df['weather']=='sunny')].reindex()
 
 - 전체 annotation이 아닌 sunny & day annotation file 분석
   - meta data에서 불필요한 feature 제거
-![image](https://user-images.githubusercontent.com/91417254/206897172-12ee019e-2097-409c-bb30-e89a0a47a91d.png)
-![image](https://user-images.githubusercontent.com/91417254/206897185-e951fbe8-4f68-4f05-959f-fb65b871ebc2.png)
   - 전체 annotation file : 78,463
   - sunny & day annotation file: 23,342
 
 ### Meta Data Analysis
-![image](https://user-images.githubusercontent.com/91417254/206897573-085aebb1-5d53-4703-b8c4-9f3701f6cf62.png)
-![image](https://user-images.githubusercontent.com/91417254/206909597-c84e7c73-cdca-4ff0-a7a7-80b27ce8e0c8.png)
 - 여타의 meta data feature에서 insight를 발견하지 못하였다.
 
 ### Bounding Box(Annotations) Anaysis
-![image](https://user-images.githubusercontent.com/91417254/206909785-3e588b41-6dcd-40f6-b725-bf9bc9852b3b.png)
 - sunny & day인 image-annotation 쌍은 총 362,428이며 annotation file 내부에 annotations는 13개의 feature를 가진다.
   
-  ![image](https://user-images.githubusercontent.com/91417254/206909886-1c580db2-1c3a-426e-920c-60110c02582c.png)
-  ![image](https://user-images.githubusercontent.com/91417254/206909901-9c21061d-9841-4701-be5a-2f298016e760.png)
-  ![image](https://user-images.githubusercontent.com/91417254/206909967-1fa9ce77-8be7-4b64-a8c9-10164d4e3a02.png)
   - label은 bbox의 class(정답)이며 vehicle이 약 50%로 14개의 가짓수 중 가장 많은 비율을 차지한다. 
     - Model의 성능을 개선하기 위해서 vehicle을 제외한 label data를 augumentation이 하거나 vehicle을 일부분 제거하는것이 좋아보인다.
 
-  ![image](https://user-images.githubusercontent.com/91417254/206910144-34b714e1-5f06-4074-adb6-c75c776f62c5.png)
-  ![image](https://user-images.githubusercontent.com/91417254/206910154-2e1bae68-62b4-4cb3-9b78-bda4670d6a68.png)
-  ![image](https://user-images.githubusercontent.com/91417254/206910162-aaa125a0-8969-46ab-8f18-47fdb9a22a69.png)
-  - attribute는 label의 상세 class이다. label과 마찬가지로 car가 약 40%로 class unbalance가 존재한다.
-  
-  ![image](https://user-images.githubusercontent.com/91417254/206910503-c4ca8e62-db88-483a-9144-564ff52c107f.png)
-  ![image](https://user-images.githubusercontent.com/91417254/206910641-b08d7a63-bea5-4df5-93c9-384d68b8f7e1.png)
+
 
   - 25 X 25 pixel 이하의 차량은 자율주행 관점의 object detection에서 학습에 방해요소이디.
     - 625 pixel 이하의 bbox를 분석한다.
