@@ -26,37 +26,22 @@
 
 # 2. Data
 ## 2.1 Aimmo Dataset
-- total dataset : 156,957
-    - image : 78,494
-    - annotation: 78,463
-    - unpaired images: 31 
+
 
 ## 2.2 EDA
 ### 2.2.1 Sunny & Day Data 
-- model_centric은 전체 dataset이 아닌 sunny/day datset만을 사용한다.
-- 총 78,463개의 annotation file 중 sunnay/day file은 23,342
 
 ### 2.2.2 meta data EDA
-![image](https://user-images.githubusercontent.com/91417254/206916500-2dc5bf04-42e3-41a6-bda2-91470cae8840.png)
-![image](https://user-images.githubusercontent.com/91417254/206916507-90d67b37-f9b9-49f7-9549-80fa467f14af.png)
+
 
 ### 2.2.3 annotations EDA
-![image](https://user-images.githubusercontent.com/91417254/206916630-6900541f-ed69-4e4e-aeab-ae1d85c58503.png)
-- 23,342의 annotations file의 bbox 수량은 362,428
 
-![image](https://user-images.githubusercontent.com/91417254/206916675-6ac4a141-e8d7-422d-8760-a3765fadc48e.png)
-![image](https://user-images.githubusercontent.com/91417254/206916894-f8521fc5-ceb5-4aa3-9963-ab7b3049f7e0.png)
-![image](https://user-images.githubusercontent.com/91417254/206916909-7882ccfd-f2d4-4dcb-a8be-d7f40195de17.png)
 
-![image](https://user-images.githubusercontent.com/91417254/206916924-a543a434-73d6-425b-917f-87afeb7cef39.png)
-![image](https://user-images.githubusercontent.com/91417254/206916932-2f900822-1a4a-421a-987f-e552e7a83fd1.png)
-![image](https://user-images.githubusercontent.com/91417254/206916940-60336338-b625-40d8-b355-dfc3f8a9bcbc.png)
+
 
 - Objcet의 Class(정답)에 해당하는 label과 attribute(상세 label) 모두 class unbalance가 존재한다.
 
-![image](https://user-images.githubusercontent.com/91417254/206917009-37766f88-e8e7-4b21-a66c-e8977295146d.png)
-![image](https://user-images.githubusercontent.com/91417254/206917066-8f1753ea-9c57-48d2-aee2-6916e0b9efba.png)
-- 625 pixel size 이하의 bbox(번호판,차량 )가 약 30% 존재한다
+
 
 
 ## 2.3 Data Preprocessing
@@ -67,7 +52,6 @@
 - 전체 label & attribute가 아닌 한정된 class 사용
 - car,bus,truck,pedestrian class 사용
 
-![image](https://user-images.githubusercontent.com/91417254/206923640-64b8c168-978a-4f7b-a850-d736891a2bb8.png)
 
 ### 2.3.2 Data Format
 - MMDetection training & inference 를 위한 Data format converting
