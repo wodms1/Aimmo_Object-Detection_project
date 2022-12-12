@@ -50,12 +50,10 @@ python
 data = pd.json_normalize(annotations)
 
 # 전체 feature가 아닌 특정feature만 사용
-df = data[['file_format','size','data_purpose','weather','time','road_feature','road_type',
-             'location_feature','driving_scenario','ego_long_vel_level','illumination_status',
-              'road_status','crowd_level','sensor_status','annotations']]
+
 
 # sunny & day dataset만 사용
-df = df[(df['time']=='day') & (df['weather']=='sunny')].reindex()
+
 ```
 
 - 전체 annotation이 아닌 sunny & day annotation file 분석
