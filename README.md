@@ -7,7 +7,7 @@
 - 주제 : Model-Centric Object Detection AI
 - 목적 : 제한적인 조건(주간/맑음 & 특정 class dataset)에서 추론 성능이 잘 나오는 모델을 합리적으로 찾아서 학습 및 테스트
 - 기간 : 2022.11.01 ~ 2022.12.13
-- 방식 : 팀프로젝트
+- 방식 : 팀 프로젝트
 
 ## 1.2 프로젝트 목표
 - 다양한 object detection model을 활용한 객체 탐지성능 최대화 및 추론 결과 논의
@@ -111,7 +111,7 @@ python
 ## 2.2 EDA
 ### 2.2.1 Sunny & Day Data 
 - model_centric은 전체 dataset이 아닌 sunny/day datset만을 사용한다.
-- 총 78,463의 annotation file 중 sunnay/day file은 23,342 
+- 총 78,463개의 annotation file 중 sunnay/day file은 23,342
 
 ### 2.2.2 meta data EDA
 ![image](https://user-images.githubusercontent.com/91417254/206916500-2dc5bf04-42e3-41a6-bda2-91470cae8840.png)
