@@ -197,6 +197,21 @@ python
 - yolo v3의 경우 val에 대한 mAP가 나오지만 test에 대한 mAP가 0으로 나온다. 이는 코드상의 에러로 보인다. 추후 수정
 
 # YOLO v5
+|file_name|fulldata|fl_gamma(focal loss gamma)|epoch|img_size|test data(clear day)|best_val_mAP|best_test_mAP|
+|-----|-----|-----|-----|-----|-----|-----|-----|
+|default|x|0.0|30|(1920,1024)|x|0.403|x|
+|default|o|0.0|28|(960,512)|x|0.711|0.717|
+|default|o|0.0|28|(960,512)|o|0.711|0.742|
+|Focal_loss_1.0|o|1.0|20|(960,512)|o|0.709|0.733|
+|Focal_loss_2.0|o|2.0|20|(960,512)|o|0.699|0.683|
+|Augmentation|o|1.0|43|(960,512)|o|0.0005311|0.64|
+
+- default 값은 pretrain 된 yolov5l 모델을 사용했다. 성능 개선을 위해 상위버전인 yolov5xl를 써보려고 했으나, 메모리 문제로 실패했다.
+우선, sample 데이터로 모델 구동이 가능한지 실험을 했다. 성공 후, 전체 데이터로 훈련시켰다. 그 후, 전체 Test 파일과, 주간 맑음 파일로 테스트를 진행했다.
+
+- 성능개선을 위하여, Loss 모델을 변경했다. Yolov5 기본 loss 모델은 Cross_entropy이다. 하지만, 하이퍼 파라미터 파일에서 fl_gamma 값을 조정하면, focal_loss 모델을 이용할 수 있었다. 실험은 fl_gamma값을 각각 1.0, 2.0으로 실험을 진행했다. 결과는 동일한 epoch 기준 1.0값이 제일 좋은 성능을 보였다.
+
+- mAP 값을 고득점 받기 위한 생각을 했을 때, 가장 먼저 떠오르는 생각은 데이터 양을 늘리는 것이다. 이 가설을 위해 augmentation 기법을 이용하여 실험했다. 또한, 더 좋은 성능을 보였던 focalloss을 이용했다. 
 
 # YOLO X
 |file_name|fulldata|backbone|epoch|img_size |best_val_mAP|best_test_mAP|
