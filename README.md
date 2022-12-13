@@ -1,6 +1,6 @@
 # AIFFEL x AIMMO Project
 - DL 기반 데이터 라벨링 서비스를 제공하는 Aimmo의 자율주행 학습용 Dataset을 활용한 Model-centric Object Detection.
-
+- AIMMO 기밀서약으로 인한 data 비공개
 # 1. 프로젝트 소개
 
 ## 1.1 개요
